@@ -102,3 +102,4 @@ dist
 
 # TernJS port file
 .tern-port
+create-tableau-dashboard-extension/package-lock.json
