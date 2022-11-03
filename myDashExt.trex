@@ -4,7 +4,7 @@
     <default-locale>en_US</default-locale>
     <name resource-id="name"/>
     <description>Add Users to Tableau Server/Cloud</description>
-    <author name="tableau" email="github@tableau.com" organization="tableau" website="https://www.tableau.com"/>
+    <author name="tableau-labs" email="github@tableau.com" organization="tableau community" website="https://community.tableau.com"/>
     <min-api-version>1.0</min-api-version>
     <source-location>
       <url>http://localhost:3000/#</url>
@@ -16,7 +16,7 @@
   </dashboard-extension>
   <resources>
     <resource id="name">
-      <text locale="en_US">Add Users to Tableau</text>
+      <text locale="en_US">My Tableau Dashboard Extension</text>
     </resource>
   </resources>
 </manifest>
