@@ -6,9 +6,15 @@ This project helps create a basic Tableau dashboard extension.  More information
 It has not yet been published to npm, so for now here's how to get it working:
 
 Clone this repository
+
 ```git clone https://github.com/takashibinns/create-tableau-dashboard-extension```
 
-Install it globally
+This creates a directory named create-tableau-dashboard-extension in your current working directory.  Change to this new directory by using this command:
+
+```cd create-tableau-dashboard-extension```
+
+Now, install it globally
+
 ```npm install -g```
 
 ## Using the tool
