@@ -1,8 +1,12 @@
 {
   "name": "create-tableau-dashboard-extension",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "bin": {
     "create-tableau-dashboard-extension": "bin/index.js"
+  },
+  "repository": {
+    "url": "https://github.com/takashibinns/create-tableau-dashboard-extension",
+    "type": "git"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -10,7 +14,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepack": "cp ../README.md README.md"
   },
   "dependencies": {
     "@tableau/extensions-api-types": "^1.9.0",
