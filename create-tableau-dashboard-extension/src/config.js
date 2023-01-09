@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 const root = document.getElementById('root');
 ReactDOM.render(
   <React.StrictMode>
-    <App route="dashboardExtension" />
+    <App route="config"/>
   </React.StrictMode>,
   root
 );

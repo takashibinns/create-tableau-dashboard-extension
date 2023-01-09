@@ -1,4 +1,3 @@
-import { Routes, Route, HashRouter as Router } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { DashboardExtension } from './components/DashboardExtension';
@@ -10,18 +9,28 @@ const defaults = {
   apiVersion: "3.15"
 }
 
-function App() {
+function App( { route }) {
+  
+  /*  
+    We can't use regular react-routing, because that is not supported in Sandboxed dashboard extension. 
+    Instead can specify multiple entrypoints, and pass in the component as a parameter
+  */
+
+  //  Determine which component to render
+  let app;
+  if (route==="config") {
+    app = <Config settingsKey={defaults.settingsKey} defaultApiVersion={defaults.apiVersion}/>
+  } else if (route ==="dashboardExtension") {
+    app = <DashboardExtension settingsKey={defaults.settingsKey} />
+  }
+
+  //  Render the react app
   return (
     <div>
       <ToastContainer position="top-center" autoClose={5000} hideProgressBar newestOnTop theme="colored"
           closeOnClick rtl={false} pauseOnFocusLoss draggable={false} pauseOnHover
       />
-      <Router >
-        <Routes>
-          <Route path="/" element={<DashboardExtension settingsKey={defaults.settingsKey} />} />
-          <Route path="/config" element={<Config settingsKey={defaults.settingsKey} defaultApiVersion={defaults.apiVersion}/>} />
-        </Routes>
-      </Router>
+      { app }
     </div>
   );
 }
