@@ -87,7 +87,7 @@ export class DashboardExtension extends React.Component {
       const textStyle = { marginTop: '0.25em' };
       content = <div style={divStyle}>
                   <span style={textStyle}>The worksheet </span>
-                  <Pill kind='discrete' style={pillStyle}>{this.state.dataTable.name}</Pill>
+                  <Pill kind='discrete' style={pillStyle}>{this.state.selectedWorksheet}</Pill>
                   <span style={textStyle}>has</span> 
                   <Pill kind='continuous' style={pillStyle}>{this.state.dataTable.totalRowCount} rows</Pill>
                   <span style={textStyle}>and</span> 
